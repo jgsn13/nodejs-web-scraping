@@ -5,14 +5,15 @@
 ```
 yarn start
 ```
-
+- NOTE: the .pdf file will be dowloaded in root folder.
 #### Building:
 ```
 yarn tsc
 ```
-- ***The building process will create a folder called dist/ in the root directory.***
+- ***The building process will create a folder called dist/ in root folder.***
 #### Running build version:
 ```
 cd dist/
 node index.js
 ```
+- NOTE: the .pdf file will be dowloaded in dist/ folder.
