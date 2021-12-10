@@ -6,8 +6,9 @@ import fs from 'fs';
 /**
  * Returns the data from an axios GET request.
  *
- * @param url - The url to request.
+ * @param {string} url - The url to request.
  * @returns the data expected to be some HTML content
+ * @author Joaquim Gregório <https://github.com/JoaquimGregorio>
  */
 async function getData(url: string) {
   const { data } = await axios.get(url);
@@ -20,7 +21,8 @@ async function getData(url: string) {
  * @param data - Data is the html loaded from an axios request.
  * @param context - The context to find the anchor tags
  * @param pattern - Pattern maching to filter the url in the anchor tags
- * @returns The url itself as a string
+ * @returns {string} The url itself as a string
+ * @author Joaquim Gregório <https://github.com/JoaquimGregorio>
  */
 function getUrlFromAnchorTag(
   data: any,
@@ -41,6 +43,12 @@ function getUrlFromAnchorTag(
   return url;
 }
 
+/**
+ * Download the padrao-tiss_componente-organizacional_*.pdf file.
+ *
+ * @param {string} url - Requested url do download the pdf.
+ * @author Joaquim Gregório <https://github.com/JoaquimGregorio>
+ */
 async function downloadPdf(url: string) {
   try {
     let data = await getData(url);
